@@ -16,12 +16,27 @@ body {
     font-weight: 300;
 }
 
+main {
+    background-color: #F3F3F3;
+}
+
+.radius {
+    position: relative;
+    top: -40px;
+    border-radius: 40px 40px 0px 0px;
+    background-color: #F3F3F3;
+}
+
 .flex {
     display: flex;
 }
 
 .column {
     flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
 }
 
 .jcenter {
@@ -38,6 +53,10 @@ body {
 
 .w100 {
     width: 100%;
+}
+
+.w90 {
+    width: 90%;
 }
 
 .w70 {
@@ -74,8 +93,16 @@ body {
     font-size: 14px;
 }
 
+.fweight700 {
+    font-weight: 700;
+}
+
 .fweight500 {
     font-weight: 500;
+}
+
+.fweight300 {
+    font-weight: 300;
 }
 
 .gap40 {
@@ -97,6 +124,10 @@ body {
 .padding50 {
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+.padding30 {
+    padding-top: 30px;
 }
 
 .padding20 {
@@ -206,6 +237,7 @@ a:visited {
 }
 
 /******** Header ********/
+
 .logo svg {
     margin-top: 14px;
     margin-bottom: 14px;
@@ -235,6 +267,11 @@ a:visited {
     color: #353535;
     width: 12px;
     height: 16px;
+}
+
+header a {
+    position: absolute;
+    left: 17px; 
 }
 
 /******** Top section ********/
@@ -280,6 +317,13 @@ a:visited {
     background-color: var(--main-bg-color);
 }
 
+.resto-title {
+    font-family: Shrikhand;
+    font-weight: 400;
+    font-size: 28px;
+    font-style: italic;
+}
+
 /******** Footer ********/
 
 footer {
@@ -297,7 +341,10 @@ footer i {
 
 .plat {
     gap: 5px;
-    padding: 15px;
+    border-radius: 15px;
+    border: 0;
+    background-color: white;
+    padding: 0 0 0 15px;
 }
 
 .plat-title {
@@ -307,4 +354,34 @@ footer i {
 
 .entrees {
     gap: 12px;
+}
+
+.selected {
+    border-radius: 0px 15px 15px 0px;
+    background-color: var(--tertiary-color);
+    width: 0px;
+    height: 69px;
+}
+
+.menu-icon {
+    color: white;
+    border-radius: 50%;
+    border: solid 1px white;  
+}
+
+.animation input {
+    opacity: 0;
+}
+
+.animation input:checked + .selected {
+    transform-origin: top right;
+    width: 59px;
+    transition: all 1s ease-in-out;
+}
+
+.animation input:not(:checked) + .selected {
+    transform-origin: top right;
+    width: 0;
+    opacity: 0;
+    transition: all 1s ease-in-out;
 }
