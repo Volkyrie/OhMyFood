@@ -196,10 +196,10 @@
     overflow: hidden;
   }
   
-  /* .card:hover {
-      transform: scale(1.1);
-      z-index: 10;
-  } */
+  .card:hover {
+    transform: scale(1.1);
+    z-index: 10;
+  }
   
   .card-content {
     padding: 15px;
@@ -346,7 +346,7 @@
   }
   
   .loading div:nth-child(1) {
-    left: 48%;
+    left: 42%;
     animation-delay: -0.24s;
   }
   
@@ -356,7 +356,7 @@
   }
   
   .loading div:nth-child(3) {
-    left: 52%;
+    left: 58%;
     animation-delay: 0;
   }
   
@@ -476,6 +476,12 @@
     display: block;
     text-align: start;
   }
+
+  .plat span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   
   .menu section {
     opacity: 0;
@@ -506,6 +512,9 @@
     height: 69px;
     opacity: 0;
     transform-origin: left;
+    transform: scaleX(0);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
   }
   
   .menu-icon {
@@ -516,39 +525,20 @@
   
   .animation {
     transform: translateX(70px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .plat:hover .animation {
+    transform: translateX(0);
   }
   
   .animation span {
     padding: 20px;
   }
   
-  .plat:hover .animation {
-    animation: 1s ease-in-out 0.5s 1 normal forwards selection;
-  }
-  
   .plat:hover .selected {
-    animation: 1s ease-in-out 0.5s 1 normal forwards visibility;
-  }
-  
-  @keyframes selection {
-    0% {
-      transform: translateX(70px);
-    }
-  
-    100% {
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes visibility {
-    0% {
-      transform: scaleX(0);
-      opacity: 0;
-    }
-    100% {
-      transform: scaleX(1);
-      opacity: 1;
-    }
+    transform: scaleX(1);
+    opacity: 1;
   }
   
   @keyframes menu-transition {
@@ -632,7 +622,7 @@
     }
   
     .menu {
-      width: 80%;
+      width: 50%;
       margin-left: auto;
       margin-right: auto;
       background: #f6f6f6;
@@ -644,18 +634,24 @@
     }
   
     .resto-title {
-      width: 30%;
+      width: 50%;
     }
   
     .titles {
       justify-content: center;
     }
+
+    .resto-img img {
+      width: 1920px;
+      height: 383px;
+      object-fit: cover;
+    }
   }
   
   @media screen and (min-width: 1200px) {
     .padding20 {
-        padding-left: 180px;
-        padding-right: 180px;
+        padding-left: 100px;
+        padding-right: 100px;
     }
 
     .explanations .section-title {
@@ -683,6 +679,24 @@
         left: 0;
     }
 
+    .loading div:nth-child(1) {
+      left: 48%;
+      animation-delay: -0.24s;
+    }
+    
+    .loading div:nth-child(2) {
+      left: 50%;
+      animation-delay: -0.12s;
+    }
+    
+    .loading div:nth-child(3) {
+      left: 52%;
+      animation-delay: 0;
+    }
+
+    .plat-title {
+      width: 100%;
+    }
 
   }
   
