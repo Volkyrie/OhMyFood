@@ -569,6 +569,10 @@
     .step {
       width: 80%;
     }
+
+    .plat-title {
+      width: 100%;
+    }
   
     .restaurants {
       flex-direction: row;
@@ -692,10 +696,6 @@
     .loading div:nth-child(3) {
       left: 52%;
       animation-delay: 0;
-    }
-
-    .plat-title {
-      width: 100%;
     }
 
   }

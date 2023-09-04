@@ -1,0 +1,3 @@
+github: https://github.com/Volkyrie/volkyrie.github.io
+
+git pages: https://volkyrie.github.io/
