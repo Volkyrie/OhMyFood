@@ -179,8 +179,7 @@
     box-shadow: 0px 4px 10px 0px #00000040;
   }
   
-  .main-button a {
-    height: 100%;
+  .main-button {
     line-height: 48px;
     color: white;
   }
@@ -357,7 +356,6 @@
   
   .loading div:nth-child(3) {
     left: 58%;
-    animation-delay: 0;
   }
   
   @keyframes loading {
@@ -695,7 +693,6 @@
     
     .loading div:nth-child(3) {
       left: 52%;
-      animation-delay: 0;
     }
 
   }
