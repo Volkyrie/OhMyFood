@@ -71,6 +71,10 @@
   .w90 {
     width: 90%;
   }
+
+  .w68 {
+    width: 68%;
+  }
   
   .w70 {
     width: 70%;
@@ -421,6 +425,12 @@
     font-style: italic;
     width: 90%;
   }
+
+  .resto-img img {
+    width: 100vw;
+    height: 275px;
+    object-fit: cover;
+  }
   
   /******** Footer ********/
   
@@ -456,6 +466,7 @@
   }
   
   .plat {
+    width: 100%;
     gap: 5px;
     border-radius: 15px;
     border: 0;
@@ -467,7 +478,7 @@
   .plat-title {
     margin: 0;
     padding: 0;
-    width: 250px;
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -479,6 +490,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 100%;
   }
   
   .menu section {
@@ -522,7 +534,7 @@
   }
   
   .animation {
-    transform: translateX(70px);
+    transform: translateX(60px);
     transition: all 0.3s ease-in-out;
   }
 
@@ -531,7 +543,7 @@
   }
   
   .animation span {
-    padding: 20px;
+    width: 40px;
   }
   
   .plat:hover .selected {
@@ -636,7 +648,9 @@
     }
   
     .resto-title {
-      width: 50%;
+      display: flex;
+      width: 100%;
+      justify-content: center;
     }
   
     .titles {
@@ -644,13 +658,12 @@
     }
 
     .resto-img img {
-      width: 1920px;
       height: 383px;
       object-fit: cover;
     }
   }
   
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1400px) {
     .padding20 {
         padding-left: 100px;
         padding-right: 100px;
