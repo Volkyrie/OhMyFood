@@ -73,7 +73,7 @@
   }
 
   .w68 {
-    width: 68%;
+    width: 200px;
   }
   
   .w70 {
@@ -563,7 +563,14 @@
     }
   }
   
-  /******** Media quueries ********/
+  /******** Media queries ********/
+
+  @media screen and (min-width: 425px) {
+    .w68 {
+      width: 68%;
+    }
+  }
+
   
   @media screen and (min-width: 768px) {
     .explanations {
